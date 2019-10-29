@@ -134,7 +134,8 @@ class NewVmDlg(QtWidgets.QDialog, Ui_NewVMDlg):
         )
 
         self.name.setValidator(QtGui.QRegExpValidator(
-            QtCore.QRegExp("[a-zA-Z0-9_-]*", QtCore.Qt.CaseInsensitive), None))
+            QtCore.QRegExp("^[a-zA-Z][a-zA-Z0-9_-]*$", QtCore.Qt.CaseInsensitive), None))
+        self.name.maxLength = 31
         self.name.selectAll()
         self.name.setFocus()
 
