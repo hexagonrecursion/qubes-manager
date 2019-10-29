@@ -217,6 +217,7 @@ class NewVmDlg(QtWidgets.QDialog, Ui_NewVMDlg):
                 self,
                 self.tr("Error creating the qube!"),
                 self.tr("ERROR: {}").format(self.thread.msg))
+            return
 
         self.done(0)
 
